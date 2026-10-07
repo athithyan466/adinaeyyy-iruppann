@@ -1,4 +1,4 @@
-const MAX = 60;
+const MAX = 200;
 const BUCKET = "songs";
 
 const { createClient } = window.supabase;
