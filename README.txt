@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ADINEYY IRUPPEN
 
 PUBLIC:
@@ -15,7 +15,6 @@ with password:
 Admin@12345
 
 Run supabase/schema.sql in Supabase SQL Editor before testing.
-=======
 # Adineyy iruppen
 
 A lightweight local music website.
@@ -39,4 +38,4 @@ Then the song starts.
 Because this is a local/static website, the saved songs live in that browser on that device. If you clear the browser's site data, the locally stored songs can be removed.
 
 For publishing a fixed collection, keep your audio files and this website together, or a later version can be made with a server/database for shared uploads.
->>>>>>> 905e3f72096e4dae7c3aecf46cdd8eaad4e48cf1
+
