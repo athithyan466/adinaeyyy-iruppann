@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin - Adineyy Iruppen</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+</head>
+
+<body>
+
+    <main class="admin-page">
+
+        <header class="admin-header">
+            <div>
+                <p class="admin-label">ADMIN PANEL</p>
+                <h1>Adineyy Iruppen</h1>
+                <p class="admin-subtitle">
+                    Manage all submitted songs
+                </p>
+            </div>
+
+            <div class="admin-header-right">
+                <div class="song-count">
+                    <span id="adminCount">0 / 60</span>
+                    <small>SONGS</small>
+                </div>
+
+                <button id="refreshBtn" class="refresh-btn">
+                    REFRESH
+                </button>
+            </div>
+        </header>
+
+
+        <section class="admin-player-section">
+
+            <div class="player-top">
+
+                <div class="player-art">
+    <img
+        src="assets/play.jpg"
+        alt="Adineyy Iruppen Music Player"
+    >
+</div>
+
+                <div class="player-info">
+
+                    <div id="adminAnnouncement" class="announcement">
+                        READY
+                    </div>
+
+                    <div id="adminNowPerson" class="now-person">
+                        NO SONG SELECTED
+                    </div>
+
+                    <h2 id="adminNowTitle">
+                        SELECT A SONG
+                    </h2>
+
+                    <p id="adminTrackTitle" class="track-title">
+                        -
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="wave-container">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+
+            <div class="progress-area">
+
+                <span id="adminCurrentTime">
+                    0:00
+                </span>
+
+                <input
+                    id="adminProgress"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="0"
+                >
+
+                <span id="adminDuration">
+                    0:00
+                </span>
+
+            </div>
+
+
+            <div class="player-controls">
+
+                <button
+                    id="prevBtn"
+                    class="control-btn"
+                    title="Previous"
+                >
+                    |◀
+                </button>
+
+                <button
+                    id="adminPlayBtn"
+                    class="control-btn play-btn"
+                    title="Play / Pause"
+                >
+                    ▶
+                </button>
+
+                <button
+                    id="nextBtn"
+                    class="control-btn"
+                    title="Next"
+                >
+                    ▶|
+                </button>
+
+            </div>
+
+
+            <div class="player-options">
+
+                <button
+                    id="shuffleBtn"
+                    class="option-btn active"
+                >
+                    SHUFFLE
+                </button>
+
+                <button
+                    id="repeatBtn"
+                    class="option-btn"
+                >
+                    REPEAT
+                </button>
+
+                <span id="shuffleState">
+                    SHUFFLE ON
+                </span>
+
+            </div>
+
+
+            <button
+                id="playAllBtn"
+                class="play-all-btn"
+                type="button"
+            >
+                <span>▶</span>
+                PLAY ALL SONGS
+            </button>
+
+
+            <div
+                id="adminPlayerStatus"
+                class="player-status"
+            ></div>
+
+        </section>
+
+
+        <section class="library-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">
+                        COLLECTION
+                    </p>
+
+                    <h2>
+                        All Songs
+                    </h2>
+                </div>
+
+                <div
+                    id="adminStatus"
+                    class="admin-status"
+                ></div>
+
+            </div>
+
+
+            <div
+                id="songsList"
+                class="songs-list"
+            ></div>
+
+        </section>
+
+    </main>
+
+
+    <audio
+        id="adminAudio"
+        preload="metadata"
+    ></audio>
+
+
+    <script src="admin.js"></script>
+
+</body>
+</html>

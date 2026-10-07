@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Adineyy iruppen</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <section id="home" class="screen active home-screen">
+        <div class="hero"></div>
+        <div class="shade"></div>
+        <main class="home-content">
+          <h1>Adineyy iruppen</h1>
+          <div class="home-buttons">
+            <button id="addBtn" class="main-btn">
+              <span>♫＋</span> ADD A SONG <b>→</b>
+            </button>
+          </div>
+          <div id="countHome" class="count">0 / 60 songs added</div>
+        </main>
+      </section>
+
+      <section id="add" class="screen inner-screen">
+        <div class="background"></div>
+        <div class="screen-shade"></div>
+        <button class="back" data-back>← Back</button>
+        <div class="top-title">
+          Adineyy iruppen
+          <div class="mini-wave">〰〰〰</div>
+        </div>
+        <div class="panel add-panel">
+          <label for="nameInput">Your Name</label>
+          <input id="nameInput" maxlength="60" placeholder="Enter your name" />
+          <label for="songInput">Favorite Song</label>
+          <input id="songInput" maxlength="120" placeholder="Enter song name" />
+          <label for="fileInput">Upload Song File</label>
+          <input id="fileInput" type="file" accept="audio/*" />
+          <button id="saveBtn" class="save-btn">ADD SONG</button>
+          <div id="status" class="status"></div>
+          <div id="countAdd" class="count">0 / 60</div>
+          <div class="privacy-note">Your song is saved for the IV.</div>
+          <button id="mySongBtn" class="secondary-btn" hidden>
+            PLAY MY SONG
+          </button>
+        </div>
+      </section>
+
+      <section id="play" class="screen play-screen">
+        <div class="play-bg"></div>
+        <div class="play-shade"></div>
+        <button class="back play-back" data-back>← Back</button>
+        <div class="top-title play-title">
+          Adineyy iruppen
+          <div class="mini-wave">〰〰〰</div>
+        </div>
+        <main class="music-player">
+          <div class="artwork-wrap"><div class="artwork"></div></div>
+          <div class="announcement-label">HERE COMES</div>
+          <div id="announcement" class="announcement-name">READY</div>
+          <div id="trackName" class="track-name">Choose Play Songs</div>
+          <div class="equalizer" aria-hidden="true"></div>
+          <div class="progress-wrap">
+            <input id="progress" type="range" min="0" max="100" value="0" />
+            <div class="times">
+              <span id="currentTime">0:00</span><span id="duration">0:00</span>
+            </div>
+          </div>
+          <div class="player-controls">
+            <button
+              id="shuffleBtn"
+              class="round-control active-control"
+              title="Shuffle"
+            >
+              ⤨
+            </button>
+            <button id="prevBtn" class="round-control" title="Previous">
+              ◀
+            </button>
+            <button id="playPauseBtn" class="main-play" title="Play">▶</button>
+            <button id="nextBtn" class="round-control" title="Next">▶</button>
+            <button id="repeatBtn" class="round-control" title="Repeat">
+              ↻
+            </button>
+          </div>
+          <div class="queue-note">SHUFFLE <span>•</span> 60 SONGS MAX</div>
+        </main>
+      </section>
+    </div>
+    <audio id="audio" preload="metadata"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
